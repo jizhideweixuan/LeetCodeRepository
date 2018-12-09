@@ -47,5 +47,6 @@ int main() {
     fun1();
     cout << "Ë«Ñ­»·" << endl;
     fun2();
+	system("pause");
     return 0;
 }
