@@ -1,47 +1,44 @@
 ﻿#include<iostream>
-#include<string>
 using namespace std;
-
+//从某个字符为中心，左右验证。用这个方法遍历所有的字符
 string longestPalindrome(string s) {
-	string result;
-	//窗口实际长度
-	unsigned int winSize = s.length();
-	//窗口两端游标
-	unsigned int low = 0;
-	unsigned int high = winSize-1;
-    unsigned int r_low = low;
-    unsigned int r_high = high;
-	while (winSize>1)
-	{
-		//窗口从最左端开始滑动
-		for(unsigned int flag=0;flag<s.length()-winSize+1;flag++)
-		{
-            r_low = low = flag;
-            r_high = high = winSize-1;
-			while(low<high)
-			{
-				if(s[low]!=s[high])
-					break;
-				else
-				{
-					low++;
-					high--;
-				}
-			}
-			if(low>=high)
-			{
-				result = s.substr(r_low,r_high+1);
-				cout<<result;
-				return result;
-			}
-		}
-		//缩小窗口
-		winSize --;
-	}
-	return "";
+    string result="";
+    if(s.size() == 0)
+        return result;
+    //寻找奇数长的回文
+    for(int i=0; i<=s.length()-1; i++){
+        int j=i, k=i;
+        string tmp = "";
+        while( j>=0 && k<= s.length()-1 && s[j] == s[k] ){
+            j--;
+            k++;
+        }
+        if(j!=k)
+            tmp = s.substr(j+1, k-j-1);
+        else
+            tmp+=s[i];
+        if(tmp.size() >= result.length())
+            result = tmp;
+    }
+    //寻找偶数长的回文
+    for(int i=0, j=1; j<=s.length()-1; i++, j++){
+        int m=i, n=j;
+        string tmp = "";
+        while( m>=0 && n<= s.length()-1 && s[m] == s[n] ){
+            m--;
+            n++;
+        }
+        if(n-m !=1)
+            tmp = s.substr(m+1, n-m-1);
+
+        if(tmp.size() >= result.length())
+            result = tmp;
+    }
+
+    return result;
 }
 
-int main(){
-	longestPalindrome("abaaaa");
-	return 0;
+int main() {
+    cout << longestPalindrome("babad");
+    return 0;
 }
