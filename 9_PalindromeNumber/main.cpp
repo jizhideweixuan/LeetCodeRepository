@@ -5,9 +5,9 @@ bool isPalindrome(int x) {
 	int div = 1;//与位数对应的10的倍数
 	int low = 0;//最高位
 	int high = 0;//最低位
-	if (x<11)
+	if (x<0)
 		return false;
-	while(x/div > 10)
+	while(x/div >= 10)
 		div *= 10;
 	while(x!=0)
 	{
@@ -28,6 +28,6 @@ bool isPalindrome(int x) {
 int main(){
 	cout<<"input:121 "<<isPalindrome(121)<<endl;
 	cout<<"input:-121 "<<isPalindrome(-121)<<endl;
-	cout<<"input:20 "<<isPalindrome(20)<<endl;
+	cout<<"input:1001 "<<isPalindrome(1001)<<endl;
 	return 0;
 }
