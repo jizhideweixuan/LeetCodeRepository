@@ -32,7 +32,6 @@
 *.app
 
 # User
-*.xml
 CMakeLists*
 .idea/
 cmake-build-debug/
