@@ -33,6 +33,6 @@
 
 # User
 *.xml
-CMakeLists
+CMakeLists*
 .idea/
 cmake-build-debug/
