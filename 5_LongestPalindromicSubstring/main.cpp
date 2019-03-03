@@ -1,5 +1,18 @@
 ﻿#include<iostream>
 using namespace std;
+
+string longestPalindrome(string s);
+
+static auto io_sync_off = []() {
+    //不再兼容scanf和printf,让std::cin和std::cout不再经过缓冲区
+    std::ios::sync_with_stdio(false);
+    //解除std::cin和std::cout之间的绑定
+    std::cin.tie(nullptr);
+    std::cout.tie(nullptr);
+    return 0;
+}();
+
+
 //从某个字符为中心，左右验证。用这个方法遍历所有的字符
 string longestPalindrome(string s) {
     string result="";

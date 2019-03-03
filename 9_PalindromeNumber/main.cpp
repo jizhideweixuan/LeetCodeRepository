@@ -1,6 +1,17 @@
 ﻿#include<iostream>
 using namespace std;
 
+bool isPalindrome(int x);
+
+static auto io_sync_off = []() {
+	//不再兼容scanf和printf,让std::cin和std::cout不再经过缓冲区
+	std::ios::sync_with_stdio(false);
+	//解除std::cin和std::cout之间的绑定
+	std::cin.tie(nullptr);
+	std::cout.tie(nullptr);
+	return 0;
+}();
+
 bool isPalindrome(int x) {
 	int div = 1;//与位数对应的10的倍数
 	int low = 0;//最高位

@@ -12,6 +12,19 @@
 
 using namespace std;
 
+void fun1();
+void fun2();
+
+static auto io_sync_off = []() {
+    //不再兼容scanf和printf,让std::cin和std::cout不再经过缓冲区
+    std::ios::sync_with_stdio(false);
+    //解除std::cin和std::cout之间的绑定
+    std::cin.tie(nullptr);
+    std::cout.tie(nullptr);
+    return 0;
+}();
+
+
 void fun1() {
     int a, b, c, num, mon;
     for (c = 0; c <= 33; c++) {

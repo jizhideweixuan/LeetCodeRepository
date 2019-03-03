@@ -1,6 +1,17 @@
 #include <iostream>
 using namespace std;
 
+int romanToInt(string s);
+
+static auto io_sync_off = []() {
+    //不再兼容scanf和printf,让std::cin和std::cout不再经过缓冲区
+    std::ios::sync_with_stdio(false);
+    //解除std::cin和std::cout之间的绑定
+    std::cin.tie(nullptr);
+    std::cout.tie(nullptr);
+    return 0;
+}();
+
 int romanToInt(string s) {
     int res = 0;
     for (int i = s.size() - 1; i >= 0; i--) {

@@ -1,6 +1,9 @@
 #include <iostream>
 #include <vector>
+
 using namespace std;
+
+ListNode *mergeTwoLists(ListNode *l1, ListNode *l2);
 
 static auto io_sync_off = []() {
     //不再兼容scanf和printf,让std::cin和std::cout不再经过缓冲区

@@ -2,6 +2,8 @@
 #include <vector>
 using namespace std;
 
+bool isValid(string s);
+
 static auto io_sync_off = []() {
     //不再兼容scanf和printf,让std::cin和std::cout不再经过缓冲区
     std::ios::sync_with_stdio(false);
