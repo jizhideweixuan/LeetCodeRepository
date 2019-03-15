@@ -14,6 +14,7 @@ static auto io_sync_off = []() {
     return 0;
 }();
 
+
 int searchInsert(vector<int> &nums, int target) {
     if (nums.empty())
         return 0;
