@@ -10,7 +10,6 @@ static auto io_sync_off = []() {
     std::ios::sync_with_stdio(false);
     //解除std::cin和std::cout之间的绑定
     std::cin.tie(nullptr);
-    std::cout.tie(nullptr);
     return 0;
 }();
 
