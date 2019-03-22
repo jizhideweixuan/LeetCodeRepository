@@ -52,8 +52,9 @@ vector<vector<int>> threeSum(vector<int> &nums) {
                     tmp = {nums[low], nums[mid], nums[high]};
                     res.push_back(tmp);
                     //跳过重复值
-                    do { mid++; } while (mid < high and nums[mid] == nums[mid - 1]);
-                    do { high--; } while (high > mid and nums[high] == nums[high + 1]);
+                    while (mid < high && nums[mid] == nums[mid + 1]) mid++;
+                    while (mid < high && nums[high] == nums[high - 1]) high--;
+                    mid++; high--;
                 } else if (sum > 0)
                     //高位过大
                     high--;

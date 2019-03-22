@@ -1,0 +1,23 @@
+#define IOS ios_base::sync_with_stdio(0); cin.tie(0);
+#include <iostream>
+using namespace std;
+int main()
+{
+    IOS;
+    int a,b;
+    cin >> a >> b;
+    cout << a+b << endl;
+    return 0;
+}
+
+/*
+%2的次方可以用位运算代替，a%8=a&7（两倍多效率提升）
+
+/2的次方可以用移位运算代替，a/8=a>>3（两倍多效率提升）
+
+*2的次方可以用移位运算代替，a*8=a<<3（小数值测试效率不明显，大数值1.5倍效率）
+
+整数次方不要用pow，i*i比pow(i,2)快8倍，i*i*i比pow快40倍
+
+strncpy, snprintf效率对比：目标串>>源串 strncpy效率低，源串>>目标串 snprintf效率低
+*/
