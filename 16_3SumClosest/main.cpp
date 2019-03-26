@@ -1,9 +1,15 @@
-#define IOS ios_base::sync_with_stdio(0); cin.tie(0);
-
 #include <iostream>
 #include <vector>
 
 using namespace std;
+
+static auto io_sync_off = []() {
+    //不再兼容scanf和printf,让std::cin和std::cout不再经过缓冲区
+    std::ios::sync_with_stdio(false);
+    //解除std::cin和std::cout之间的绑定
+    std::cin.tie(nullptr);
+    return 0;
+}();
 
 void QSort(vector<int> &nums, int low, int high);
 
@@ -29,7 +35,6 @@ void QSort(vector<int> &nums, int low, int high) {
 }
 
 int threeSumClosest(vector<int> &nums, int target) {
-    IOS;
     if (nums.size() < 3)
         return 0;
     QSort(nums, 0, nums.size() - 1);

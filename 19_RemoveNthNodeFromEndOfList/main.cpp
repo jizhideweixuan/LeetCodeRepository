@@ -1,10 +1,14 @@
-#define IOS ios_base::sync_with_stdio(0);cin.tie(0);
-
 #include <iostream>
 
 using namespace std;
 
-ListNode *removeNthFromEnd(ListNode *head, int n);
+static auto io_sync_off = []() {
+    //不再兼容scanf和printf,让std::cin和std::cout不再经过缓冲区
+    std::ios::sync_with_stdio(false);
+    //解除std::cin和std::cout之间的绑定
+    std::cin.tie(nullptr);
+    return 0;
+}();
 
 struct ListNode {
     int val;
@@ -13,8 +17,9 @@ struct ListNode {
     ListNode(int x) : val(x), next(NULL) {}
 };
 
+ListNode *removeNthFromEnd(ListNode *head, int n);
+
 ListNode *removeNthFromEnd(ListNode *head, int n) {
-    IOS;
     ///头结点
     ListNode *dummy = new ListNode(0);
     dummy->next = head;

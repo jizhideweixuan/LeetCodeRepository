@@ -3,7 +3,14 @@
 #include <unordered_map>
 
 using namespace std;
-#define IOS ios_base::sync_with_stdio(0);cin.tie(0);
+
+static auto io_sync_off = []() {
+    //不再兼容scanf和printf,让std::cin和std::cout不再经过缓冲区
+    std::ios::sync_with_stdio(false);
+    //解除std::cin和std::cout之间的绑定
+    std::cin.tie(nullptr);
+    return 0;
+}();
 
 vector<string> letterCombinations(string digits);
 
@@ -11,7 +18,6 @@ vector<string> mapCombinations(string digits);
 
 //使用unordered_map
 vector<string> mapCombinations(string digits) {
-    IOS;
     unordered_map<char, vector<string>> table = {
             {'2', {"a", "b", "c"}},
             {'3', {"d", "e", "f"}},
@@ -33,7 +39,6 @@ vector<string> mapCombinations(string digits) {
 }
 
 vector<string> letterCombinations(string digits) {
-    IOS;
     if (digits.empty())
         return {};
     vector<vector<string>> table = {
