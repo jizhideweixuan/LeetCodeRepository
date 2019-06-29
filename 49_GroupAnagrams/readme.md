@@ -1,21 +1,22 @@
 # Group Anagrams
 
-¸ø¶¨Ò»¸ö×Ö·û´®Êý×é£¬½«×ÖÄ¸ÒìÎ»´Ê×éºÏÔÚÒ»Æð¡£×ÖÄ¸ÒìÎ»´ÊÖ¸×ÖÄ¸ÏàÍ¬£¬µ«ÅÅÁÐ²»Í¬µÄ×Ö·û´®¡£
+ç»™å®šä¸€ä¸ªå­—ç¬¦ä¸²æ•°ç»„ï¼Œå°†å­—æ¯å¼‚ä½è¯ç»„åˆåœ¨ä¸€èµ·ã€‚å­—æ¯å¼‚ä½è¯æŒ‡å­—æ¯ç›¸åŒï¼Œä½†æŽ’åˆ—ä¸åŒçš„å­—ç¬¦ä¸²ã€‚
 
-Ê¾Àý:
+* ç¤ºä¾‹:
 
-ÊäÈë: ["eat", "tea", "tan", "ate", "nat", "bat"],
-Êä³ö:
+è¾“å…¥: ["eat", "tea", "tan", "ate", "nat", "bat"],
+
+è¾“å‡º:
 [
   ["ate","eat","tea"],
   ["nat","tan"],
   ["bat"]
 ]
-ËµÃ÷£º
 
-ËùÓÐÊäÈë¾ùÎªÐ¡Ð´×ÖÄ¸¡£
-²»¿¼ÂÇ´ð°¸Êä³öµÄË³Ðò¡£
+* è¯´æ˜Žï¼š
+æ‰€æœ‰è¾“å…¥å‡ä¸ºå°å†™å­—æ¯ã€‚
+ä¸è€ƒè™‘ç­”æ¡ˆè¾“å‡ºçš„é¡ºåºã€‚
 
-À´Ô´£ºÁ¦¿Û£¨LeetCode£©
-Á´½Ó£ºhttps://leetcode-cn.com/problems/group-anagrams
-Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
+æ¥æºï¼šåŠ›æ‰£ï¼ˆLeetCodeï¼‰
+é“¾æŽ¥ï¼šhttps://leetcode-cn.com/problems/group-anagrams
+è‘—ä½œæƒå½’é¢†æ‰£ç½‘ç»œæ‰€æœ‰ã€‚å•†ä¸šè½¬è½½è¯·è”ç³»å®˜æ–¹æŽˆæƒï¼Œéžå•†ä¸šè½¬è½½è¯·æ³¨æ˜Žå‡ºå¤„ã€‚

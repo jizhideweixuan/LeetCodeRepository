@@ -10,3 +10,7 @@
 给定 "pwwkew" ，最长子串是 "wke" ，长度是3。请注意答案必须是一个子串，"pwke" 是 子序列  而不是子串。
 
 提示：哈希表
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/swap-nodes-in-pairs
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
