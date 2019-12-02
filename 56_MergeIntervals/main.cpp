@@ -34,7 +34,7 @@ int main() {
                              {15, 18}};
     vector<vector<int>> b = {{1, 4},
                              {4, 5}};
-    vector<vector<int>> ret = merge(b);
+    vector<vector<int>> ret = merge(a);
     for (size_t i = 0; i < ret.size(); ++i) {
         cout << "(" + to_string(ret[i].front()) + "," + to_string(ret[i].back()) + ") ";
     }
